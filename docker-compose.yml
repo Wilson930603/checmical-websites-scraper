@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  flask-server2:
+    image: crawler-image
+    restart: always
+    ports:
+      - 8080:8080
+    command: python3 flask-server2.py
+    volumes:
+      - /home/ubuntu/scripts/outputs:/scripts/outputs
+
+  flask-server1:
+    image: crawler-image
+    restart: always
+    ports:
+      - 8081:8081
+    command: python3 flask-server1.py
+    volumes:
+      - /home/ubuntu/scripts/outputs:/scripts/outputs
+
+  # uploader:
+  #   image: crawler-image
+  #   restart: always
+  #   command: python3 uploader.py
+  #   volumes:
+  #     - /home/ubuntu/scripts/outputs:/scripts/outputs

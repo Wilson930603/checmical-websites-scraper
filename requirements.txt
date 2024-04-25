@@ -1,0 +1,15 @@
+flask
+crochet
+bs4
+lxml
+scrapy
+boto3
+price_parser
+selenium
+latest_user_agents
+waitress
+webdriver_manager
+scrapy-rotating-proxies
+fake-headers==1.0.2
+sympy
+bs4
